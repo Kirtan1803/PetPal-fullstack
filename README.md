@@ -20,7 +20,7 @@ PetPal is a fullstack web application designed to simplify pet adoption by conne
 ### Frontend
 
 * React (Vite / CRA)
-* CSS / Theme-based styling (from `/public/theme`)
+* CSS / Theme-based styling
 * Axios / Fetch for API calls
 
 ### Backend
@@ -30,7 +30,7 @@ PetPal is a fullstack web application designed to simplify pet adoption by conne
 
 ### Database
 
-* SQLite (default) / configurable
+* MySQL
 
 ---
 
@@ -45,7 +45,6 @@ PetPal/
 │   │   ├── pages/
 │   │   ├── assets/
 │   ├── public/
-│   │   └── theme/
 │
 ├── backend/
 │   ├── core/
@@ -76,7 +75,7 @@ cd petpal
 ```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -99,7 +98,7 @@ python manage.py runserver
 ```bash
 cd frontend
 npm install
-npm run dev   # or npm start
+npm run dev
 ```
 
 ---
@@ -143,21 +142,6 @@ VITE_API_URL=http://127.0.0.1:8000/api
 
 ---
 
-## 🧪 Testing (Optional)
-
-* Backend: Django test framework
-* Frontend: React testing libraries
-
----
-
-## 🚀 Deployment (Basic Idea)
-
-* Frontend: Vercel / Netlify
-* Backend: Render / Railway / VPS
-* Database: PostgreSQL (recommended for production)
-
----
-
 ## ⚠️ Important Notes
 
 * Do NOT commit `.env` files
@@ -166,14 +150,6 @@ VITE_API_URL=http://127.0.0.1:8000/api
 
 ---
 
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create a new branch (`feature/your-feature`)
-3. Commit changes
-4. Push and create PR
-
----
 
 ## 📌 Future Improvements
 
