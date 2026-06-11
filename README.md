@@ -1,17 +1,33 @@
-# 🐾 PetPal – Fullstack Pet Adoption Platform
+# 🐾 PetPal – Full Stack Pet Adoption Platform
 
-PetPal is a fullstack web application designed to simplify pet adoption by connecting users with available pets, managing adoption requests, and providing a seamless user experience.
+PetPal is a full-stack pet adoption platform designed to connect pet owners, adopters, and administrators through a seamless and user-friendly web application.
+
+The platform allows users to browse pets available for adoption, submit adoption requests, post pets for adoption, and communicate with the platform, while administrators can manage pets, categories, users, and adoption requests through a dedicated admin dashboard.
 
 ---
 
 ## 🚀 Features
 
-* 🔐 User Authentication (Login / Register)
-* 🐶 Browse Available Pets
-* 📂 Categorized Listings
-* ❤️ Adoption Request System
-* 🧑‍💼 Admin Management (optional based on backend)
-* 🎨 Consistent UI using custom theme
+### 👤 User Features
+
+- User Registration & Authentication
+- Browse Available Pets
+- Search & Filter Pets by Category
+- View Detailed Pet Profiles
+- Submit Adoption Requests
+- Post Pets for Adoption
+- Contact Platform Administrators
+- Responsive User Interface
+
+### 🛠️ Admin Features
+
+- Secure Admin Login
+- Dashboard Analytics
+- Manage Pet Categories
+- Manage Pet Listings
+- Manage Adoption Requests
+- Manage Registered Users
+- Monitor Platform Activity
 
 ---
 
@@ -19,153 +35,231 @@ PetPal is a fullstack web application designed to simplify pet adoption by conne
 
 ### Frontend
 
-* React (Vite / CRA)
-* CSS / Theme-based styling
-* Axios / Fetch for API calls
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Bootstrap
 
 ### Backend
 
-* Django
-* Django REST Framework
+- Django
+- Django REST Framework
 
 ### Database
 
-* MySQL
+- MySQL
+
+### Authentication
+
+- JWT Authentication
+
+### API Communication
+
+- REST APIs
+- Axios
 
 ---
 
-## 📁 Project Structure
+## 📸 Screenshots
 
-```
-PetPal/
+### Homepage
+
+![Homepage](screenshots/homepage.png)
+
+### About Page
+
+![About Page](screenshots/about-page.png)
+
+### Pet Listings
+
+![Pet Listings](screenshots/pet-listings.png)
+
+### Post Pet Request
+
+![Post Pet Request](screenshots/post-pet-request.png)
+
+### Contact Page
+
+![Contact Page](screenshots/contact-page.png)
+
+### Admin Login
+
+![Admin Login](screenshots/admin-login.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+---
+
+## 📂 Project Structure
+
+```text
+PetPal-fullstack/
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── assets/
 │   ├── public/
+│   ├── package.json
+│   └── ...
 │
 ├── backend/
-│   ├── core/
-│   ├── users/
-│   ├── pets/
-│   ├── adoption/
-│   ├── categories/
+│   ├── manage.py
+│   ├── apps/
+│   ├── requirements.txt
+│   └── ...
 │
-├── .gitignore
+├── screenshots/
+│   ├── homepage.png
+│   ├── about-page.png
+│   ├── pet-listings.png
+│   ├── post-pet-request.png
+│   ├── contact-page.png
+│   ├── admin-login.png
+│   └── admin-dashboard.png
+│
 └── README.md
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/petpal.git
-cd petpal
+git clone https://github.com/Kirtan1803/PetPal-fullstack.git
+cd PetPal-fullstack
 ```
 
 ---
 
-### 2️⃣ Backend Setup (Django)
+### 2️⃣ Backend Setup
 
 ```bash
 cd backend
+
 python -m venv venv
+
 venv\Scripts\activate
+
 pip install -r requirements.txt
 ```
 
-Apply migrations:
+Configure your database settings and run migrations:
 
 ```bash
 python manage.py migrate
 ```
 
-Run server:
+Start the Django server:
 
 ```bash
 python manage.py runserver
 ```
 
+Backend will run at:
+
+```text
+http://127.0.0.1:8000
+```
+
 ---
 
-### 3️⃣ Frontend Setup (React)
+### 3️⃣ Frontend Setup
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
----
+Frontend will run at:
 
-## 🔌 API Integration
-
-* Base URL: `http://127.0.0.1:8000/api/`
-* Ensure frontend API calls match backend endpoints
-* Auth handled via (JWT / Session — update based on your setup)
-
----
-
-## 🎨 Theme Usage
-
-* UI styling is based on files inside:
-
-  ```
-  frontend/public/theme/
-  ```
-* Avoid overriding theme styles unnecessarily
-* Maintain consistency across all components
-
----
-
-## 🔐 Environment Variables
-
-Create `.env` files where necessary:
-
-### Backend:
-
-```
-SECRET_KEY=your_secret_key
-DEBUG=True
-```
-
-### Frontend:
-
-```
-VITE_API_URL=http://127.0.0.1:8000/api
+```text
+http://localhost:5173
 ```
 
 ---
 
-## ⚠️ Important Notes
+## 🔐 Authentication Workflow
 
-* Do NOT commit `.env` files
-* Do NOT upload `node_modules/`
-* Ensure consistent API contracts between frontend & backend
+### Users
+
+- Register Account
+- Login
+- Browse Pets
+- Submit Adoption Requests
+- Post Pets for Adoption
+
+### Administrators
+
+- Secure Admin Login
+- Manage Categories
+- Manage Pets
+- Review Adoption Requests
+- Manage Users
 
 ---
 
+## 🌟 Core Modules
 
-## 📌 Future Improvements
+### User Module
 
-* Real-time notifications
-* Advanced filtering
-* Admin dashboard enhancements
-* Image upload optimization
+- Registration
+- Login
+- Profile Management
+
+### Pet Management Module
+
+- Add Pet
+- View Pets
+- Filter Pets
+- Pet Details
+
+### Adoption Module
+
+- Adoption Requests
+- Request Tracking
+
+### Category Module
+
+- Category Creation
+- Category Management
+
+### Admin Dashboard
+
+- Statistics Overview
+- User Management
+- Pet Management
+- Adoption Request Management
+
+---
+
+## 📈 Future Enhancements
+
+- Real-Time Notifications
+- AI-Based Pet Recommendations
+- In-App Messaging
+- Email Notifications
+- Image Optimization
+- Mobile Application Version
 
 ---
 
 ## 👨‍💻 Author
 
-Kirtan Tanti
+**Kirtan Tanti**
+
+- GitHub: https://github.com/Kirtan1803
+- LinkedIn: https://linkedin.com/in/kirtantanti
+- Portfolio: https://kirtan-portfolio-pi.vercel.app/
 
 ---
 
 ## 📄 License
 
-This project is for educational purposes.
+This project is developed for educational, learning, and portfolio purposes.
